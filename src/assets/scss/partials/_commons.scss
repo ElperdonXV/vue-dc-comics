@@ -14,3 +14,13 @@ html{
         padding: 20px;
         margin: 0 auto;
 }
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.float{
+    float: left;
+}
