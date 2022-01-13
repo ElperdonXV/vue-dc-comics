@@ -7,7 +7,7 @@
                     <a href="">Characters</a>
                 </li>
                 <li>
-                    <a href="">Comics</a>
+                    <a href="" class="active">Comics</a>
                 </li>
                 <li>
                     <a href="">Movies</a>
@@ -54,17 +54,27 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100px;
     }
     ul{
         list-style: none;
         display: flex;
-        gap: 10px;
+        gap: 18px;
         li a {
             text-decoration: none;
             color: black;
             font-weight: bold;
             text-transform: uppercase;
             font-size: 1.2em;
+            &:hover,
+            &:active{
+                color: #0282F9;
+            }
+            &.active{
+                color: #0282F9;
+                border-bottom: 5px solid #0282F9;
+                padding-bottom: 32px;
+            }
         }
     }
     .logo{
