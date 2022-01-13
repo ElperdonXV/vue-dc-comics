@@ -49,7 +49,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+    .container{
+        padding-bottom: 0px;
+    }
     header{
         display: flex;
         justify-content: space-between;
