@@ -3,15 +3,17 @@
       <div class="top">
           <div class="jumbotron">
           </div>
-          <div class="container">
+          <div class="top-b">
+              <div class="container">
               <div class="products">
-                  <div v-for="(product, index) in products" :key="index" class="product">
-                      <div class="thumb">
-                          <img :src="product.thumb" :alt="product.series">
-                      </div>
-                      <h2>{{product.series}}</h2>
-                  </div>
+                  <Product
+                  v-for="(product, index) in products" :key="index"
+                  :src="product.thumb"
+                  :alt="product.series"
+                  :series="product.series"
+                  />
               </div>
+          </div>
           </div>
       </div>
       <div class="bottom">
@@ -44,8 +46,12 @@
 </template>
 
 <script>
+import Product from './Product.vue'
 export default {
     name:'Main',
+    components: {
+        Product,
+    },
     data (){
         return{
             products: [
@@ -135,19 +141,16 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
     }
-
-    .products{
+    .top-b{
+        background-color: #303030;
+        .products{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        .product{
-            flex-basis: calc(100% / 6);
-            .thumb{
-                height: 200px;
-                overflow: hidden;
-            }
-        }
+        padding: 30px;
     }
+    }
+    
 
     .bottom{
         background-color: #0282F9;
