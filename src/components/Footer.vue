@@ -1,9 +1,10 @@
 <template>
   <footer>
       <div class="top">
-          <div class="container clearfix">
-              <div class="big-col-sx float">
-                  <div class="col-1">
+          <div class="container relative">
+              <div class="big-col-sx">
+                  <div class="footer-menu">
+                      <div class="col-1">
                       <h1>Dc Comics</h1>
                       <ul>
                           <li>
@@ -84,14 +85,39 @@
                           </li>
                       </ul>
                   </div>
-              </div>
-              <div class="big-col-dx float">
+                </div>
+            </div>
+              <div class="logo">
                   <img src="../assets/img/dc-logo-bg.png" alt="">
               </div>
           </div>
       </div>
       <div class="bottom">
-          <div class="container"></div>
+          <div class="container">
+              <div class="footer-end">
+                  <a href="" id="button">Signup Now</a>
+                  <div class="social">
+                      <h3>Follow Us</h3>
+                      <div class="icons">
+                          <a href="">
+                              <img src="../assets/img/footer-facebook.png" alt="">
+                          </a>
+                          <a href="">
+                              <img src="../assets/img/footer-periscope.png" alt="">
+                          </a>
+                          <a href="">
+                              <img src="../assets/img/footer-pinterest.png" alt="">
+                          </a>
+                          <a href="">
+                              <img src="../assets/img/footer-twitter.png" alt="">
+                          </a>
+                          <a href="">
+                              <img src="../assets/img/footer-youtube.png" alt="">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
   </footer>
 </template>
@@ -119,33 +145,62 @@ export default {
         text-transform: uppercase;
     }
     .top{
-        height: 450px;
+        height: 400px;
         background-image: url(../assets/img/footer-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
         align-items: center;
+        overflow: hidden;
         .big-col-sx{
             width: 50%;
-            height: 450px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: nowrap;
+            padding: 0 20px;
+            .footer-menu{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                gap: 40px;
+            }
         }
-        .big-col-dx{
-            width: 50%;
-            height: 450px;
-            text-align: right;
-            position: relative;
+        .logo{
+            top: -25px;
+            right: 0;
+            position: absolute;
             img{
                 position: absolute;
-                top: -20;
-                right: 0;
+                top: -30px;
+                right: -20px;
                 height: 450px;
             }
         }
     }
     .bottom{
-        background-color: grey;
+        background-color: #303030;
+    }
+    .footer-end{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #button{
+            font-size: 1.3em;
+            color: white;
+            padding: 10px;
+            border: 3px solid #0282F9;
+        }
+        .social{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            h3{
+                color: #0282F9;
+                text-transform: uppercase;
+            }
+            .icons{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+        }
     }
 </style>
