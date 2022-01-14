@@ -2,7 +2,13 @@
   <main>
       <div class="top">
           <div class="jumbotron">
+              <div class="container relative">
+                  <div class="title">
+                    <h2>Current Series</h2>
+                  </div>
+              </div>
           </div>
+          
           <div class="top-b">
               <div class="container">
               <div class="products">
@@ -140,6 +146,23 @@ export default {
         background-image: url(../assets/img/jumbotron.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        .container{
+            height: 100%;
+        }
+        .title{
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            background-color: #0282F9;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+            h2{
+                color: white;
+                text-transform: uppercase;
+            }
+
+        }
     }
     .top-b{
         background-color: #303030;
