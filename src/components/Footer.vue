@@ -146,6 +146,6 @@ export default {
         }
     }
     .bottom{
-        
+        background-color: grey;
     }
 </style>
