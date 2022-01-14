@@ -4,7 +4,14 @@
           <div class="jumbotron">
           </div>
           <div class="container">
-              <h1>-->Content goes here</h1>
+              <div class="products">
+                  <div v-for="(product, index) in products" :key="index" class="product">
+                      <div class="thumb">
+                          <img :src="product.thumb" :alt="product.series">
+                      </div>
+                      <h2>{{product.series}}</h2>
+                  </div>
+              </div>
           </div>
       </div>
       <div class="bottom">
@@ -41,7 +48,7 @@ export default {
     name:'Main',
     data (){
         return{
-            Products: [
+            products: [
                         {
                             "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
                             "price": "$19.99",
@@ -127,6 +134,19 @@ export default {
         background-image: url(../assets/img/jumbotron.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .products{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .product{
+            flex-basis: calc(100% / 6);
+            .thumb{
+                height: 200px;
+                overflow: hidden;
+            }
+        }
     }
 
     .bottom{
